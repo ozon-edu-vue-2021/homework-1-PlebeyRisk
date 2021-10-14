@@ -33,12 +33,12 @@
         <h2>How much will!</h2>
         <p><span class="counter"></span> + <span class="step"></span></p>
         <p><strong>Result: <span class="sum"></span></strong></p>
-        <div class="math math__counter">
+        <div class="math math_type_counter">
             Counter:
             <button class="button minus">-1</button>
             <button class="button plus">+1</button>
         </div>
-        <div class="math math__step">
+        <div class="math math_type_step">
             Step:
             <button class="button minus">-2</button>
             <button class="button plus">+2</button>
@@ -53,10 +53,10 @@
             },
             methods: {
                 incrementCounterHandler() {
-                    this.counter += 1;
+                    this.counter++;
                 },
                 decrementCounterHandler() {
-                    this.counter -= 1;
+                    this.counter--;
                 },
                 incrementStepHandler() {
                     this.step += 2;
@@ -74,10 +74,10 @@
     </script>
     <script>
         const counterEl = document.querySelector('.js-app .counter');
-        const counterButtonElMinus = document.querySelector('.js-app .math__counter .minus');
-        const counterButtonElPlus = document.querySelector('.js-app .math__counter .plus');
-        const stepButtonElMinus = document.querySelector('.js-app .math__step .minus');
-        const stepButtonElPlus = document.querySelector('.js-app .math__step .plus');
+        const counterButtonElMinus = document.querySelector('.js-app .math_type_counter .minus');
+        const counterButtonElPlus = document.querySelector('.js-app .math_type_counter .plus');
+        const stepButtonElMinus = document.querySelector('.js-app .math_type_step .minus');
+        const stepButtonElPlus = document.querySelector('.js-app .math_type_step .plus');
         const sumEl = document.querySelector('.js-app .sum');
         const stepEl = document.querySelector('.js-app .step');
 
@@ -87,11 +87,11 @@
         };
 
         const incrementCounterHandler = function () {
-            data.counter += 1;
+            data.counter++;
             counterEl.textContent = data.counter;
         };
         const decrementCounterHandler = function () {
-            data.counter -= 1;
+            data.counter--;
             counterEl.textContent = data.counter;
         };
         const incrementStepHandler = function () {
